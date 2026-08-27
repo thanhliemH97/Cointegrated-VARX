@@ -117,7 +117,7 @@ for (n in c(50,100,200,400,1000)) {
   cat("mean and variance of the standardized estimates of B0\n")
   cat("LSE, MLE\n")
   cat(round(colMeans(res[,19:20]),3),"\n")
-  cat(round(diag(var(res[,19:20]),3)),"\n\n")
+  cat(round(diag(cov(res[,19:20]),3)),"\n\n")
 }
 bigtac = Sys.time() - bigtic
 print("total time")
